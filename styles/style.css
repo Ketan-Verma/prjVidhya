@@ -113,7 +113,11 @@ body {
   padding: 3em 2em;
   text-align: center;
 }
-
+.end p {
+  padding-top: 10px;
+  font-size: 1.2em;
+  font-weight: 500;
+}
 .end ul {
   display: inline-block;
   text-align: left;
@@ -159,7 +163,7 @@ body {
 .contribute {
   background-color: var(--bg-main);
   border-radius: 10px;
-  padding: 1em;
+  padding: 2em;
   max-width: 720px;
   margin: auto 20px;
   margin-bottom: 100px;
@@ -171,6 +175,7 @@ body {
   padding: 1em;
 }
 .contribute li {
+  font-weight: 500;
   list-style-type: disc;
 }
 

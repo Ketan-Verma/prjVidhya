@@ -11,11 +11,11 @@ resizeCanvas();
 
 let flowers = [];
 const flowerImages = [
-  "../assets/flowers/flower2.png",
-  "../assets/flowers/flower3.png",
-  "../assets/flowers/flower4.png",
-  "../assets/flowers/flower5.png",
-  "../assets/flowers/flower6.png",
+  "flower2.png",
+  "flower3.png",
+  "flower4.png",
+  "flower5.png",
+  "flower6.png",
 ]; // Array of flower image paths
 
 // Linear interpolation function

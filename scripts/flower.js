@@ -11,12 +11,11 @@ resizeCanvas();
 
 let flowers = [];
 const flowerImages = [
-  // Replace with actual paths
-  "assets/flowers/flower2.png",
-  "assets/flowers/flower3.png",
-  "assets/flowers/flower4.png",
-  "assets/flowers/flower5.png",
-  "assets/flowers/flower6.png",
+  "../assets/flowers/flower2.png",
+  "../assets/flowers/flower3.png",
+  "../assets/flowers/flower4.png",
+  "../assets/flowers/flower5.png",
+  "../assets/flowers/flower6.png",
 ]; // Array of flower image paths
 
 // Linear interpolation function
@@ -24,7 +23,7 @@ function lerp(start, end, t) {
   return start + (end - start) * t;
 }
 
-// Flower class that randomly selects an image
+// Flower class that randomly selects an image or draws a circle if image fails to load
 class Flower {
   constructor() {
     this.x = Math.random() * canvas.width;
@@ -34,11 +33,19 @@ class Flower {
     this.angle = Math.random() * Math.PI * 2;
     this.swing = Math.random() * 2;
 
-    // Randomly select an image
+    // Randomly select an image from the preloaded images
     this.image = new Image();
     const randomImagePath =
       flowerImages[Math.floor(Math.random() * flowerImages.length)];
     this.image.src = randomImagePath;
+
+    // Set an onerror handler to fall back to drawing a circle if the image fails
+    this.image.onerror = () => {
+      this.isImageLoaded = false;
+    };
+
+    // Track if the image has loaded successfully
+    this.isImageLoaded = true;
   }
 
   update() {
@@ -58,17 +65,58 @@ class Flower {
 
   draw() {
     ctx.globalAlpha = this.opacity; // Apply the opacity
-    ctx.drawImage(this.image, this.x, this.y, this.size, this.size);
+
+    // If image is not loaded, draw a circle as fallback
+    if (this.isImageLoaded) {
+      ctx.drawImage(this.image, this.x, this.y, this.size, this.size);
+    } else {
+      ctx.globalAlpha /= 2;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size / 2, 0, Math.PI * 2); // Draw a circle instead of the image
+      ctx.fillStyle = "#fff"; // Set the circle color (or any color you prefer)
+      ctx.fill();
+    }
+
     ctx.globalAlpha = 1; // Reset globalAlpha to 1 for other elements
   }
 }
 
+// Function to preload all images and start the animation once done
+function preloadImages(imagePaths, callback) {
+  let loadedImages = 0;
+  const images = [];
+
+  // Loop through image paths and preload each image
+  imagePaths.forEach((src, index) => {
+    const img = new Image();
+    img.onload = () => {
+      loadedImages++;
+      if (loadedImages === imagePaths.length) {
+        // Once all images are loaded, invoke the callback
+        callback();
+      }
+    };
+    img.src = src;
+    images.push(img);
+  });
+
+  return images;
+}
+
+// Once all images are loaded, start the flower creation and animation
+preloadImages(flowerImages, () => {
+  createFlowers();
+  animate();
+});
+
+// Function to create flower objects
 function createFlowers() {
   for (let i = 0; i < 15; i++) {
     flowers.push(new Flower());
   }
 }
 
+// Function to animate the flowers
 function animate() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   flowers.forEach((flower) => {
@@ -77,11 +125,3 @@ function animate() {
   });
   requestAnimationFrame(animate);
 }
-
-flowerImages.forEach((imgSrc) => {
-  const img = new Image();
-  img.src = imgSrc; // Preload all images
-});
-
-createFlowers();
-animate();

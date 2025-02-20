@@ -77,9 +77,11 @@ body {
 }
 
 .downloads h1,
+.downloads h2,
+.downloads h3,
 .downloads p {
   text-align: center;
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
 }
 
 .downloads ul {

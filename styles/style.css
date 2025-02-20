@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --bg-main: #ccc;
+  --bg-sec: #edb4d0;
+  --bg-3: #b20b5c;
+  --text-sec: #9b3922;
+  --text-main: #5c1756;
+  --text-normal: #fff;
+}
+* {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /* color: var(--text-normal); */
+  font-family: Roboto;
+}
+html,
+body {
+  background: var(--bg-sec);
+}
+hr {
+  border: var(--text-main) 1px dashed;
+}
+
+marquee {
+  background-color: var(--text-main);
+  color: #ccc;
+}
+/* nav */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--bg-sec);
+  padding: 1em;
+}
+.nav .logo {
+  padding: 1em 1.5em;
+  /* color: var(--text-main); */
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.nav ul {
+  display: flex;
+}
+.nav li {
+  padding: 1em;
+  font-weight: 500;
+}
+/*end nav */
+
+/* hero */
+.hero {
+  padding: 1em 0;
+  text-align: center;
+  background: #edb4d0;
+  color: var(--text-main);
+  min-height: 400px;
+}
+.hero img {
+  margin-top: 100px;
+  width: 50px;
+}
+
+/*end  hero */
+
+/* notes and stuff */
+
+.downloads {
+  /* padding-top: 500px; */
+  padding: 1em;
+  min-height: 600px;
+  background-color: #edb4d0;
+}
+.downloads h1,
+.downloads h2 {
+  color: var(--text-main);
+  margin-top: 100px;
+  text-align: center;
+  margin-bottom: 100px;
+  /* padding: 1em; */
+}
+.downloads ul {
+  margin-top: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.downloads li {
+  padding: 1em;
+  font-size: 1.5em;
+  /* border: 1px solid salmon; */
+  border-radius: 15px;
+  margin: 10px;
+  min-width: 200px;
+  text-align: center;
+  background: #f2cfe0;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.downloads li:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* end notes and stuff */
+
+/* message */
+.end {
+  height: 600px;
+  padding: 2em;
+}
+.end h1 {
+  margin-bottom: 20px;
+  color: var(--text-main);
+}
+.end p {
+  font-size: 22px;
+}
+.end ul {
+  margin-top: 10px;
+  margin-left: 100px;
+  font-size: 22px;
+}
+.end li {
+  font-size: 1.25em;
+  list-style: disc;
+  font-weight: 500;
+}
+/* end message */
+
+@media only screen and (max-width: 600px) {
+  /* nav */
+
+  .nav {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav .links {
+    display: none;
+  }
+  /* end nav */
+
+  /* hero */
+  .hero {
+    padding: 1em;
+    font-size: 0.9em;
+  }
+
+  .hero img {
+    margin-top: 50px;
+    /* width: 50px; */
+  }
+  /* end hero */
+
+  /* downloads */
+  .downloads {
+    min-height: 800px;
+  }
+  .downloads h1,
+  .downloads h2 {
+    color: var(--text-main);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    /* padding: 1em; */
+  }
+
+  /* downloads */
+
+  /* end */
+  .end ul {
+    margin-top: 10px;
+    margin-left: 50px;
+  }
+  /* end end */
+}

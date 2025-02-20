@@ -3,77 +3,87 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./assets/logo icon/lotus.png" type="image/x-icon" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <head>
-      <meta property="og:title" content="Project Vidhya" />
-      <meta property="og:description" content="Create, Innovate and Learn, ." />
-      <meta
-        property="og:image"
-        content="https://ketan-verma.github.io/prjVidhya/assets/logo%20icon/lotus.png"
-      />
-      <meta
-        property="og:url"
-        content="https://ketan-verma.github.io/prjVidhya/"
-      />
-      <!-- <meta name="twitter:card" content="summary_large_image"> -->
-    </head>
-
     <title>Project Vidhya</title>
+    <meta property="og:title" content="Project Vidhya" />
+    <meta property="og:description" content="Create, Innovate and Learn." />
+    <meta
+      property="og:image"
+      content="https://ketan-verma.github.io/prjVidhya/assets/logo%20icon/lotus.png"
+    />
+    <meta
+      property="og:url"
+      content="https://ketan-verma.github.io/prjVidhya/"
+    />
+    <link rel="icon" href="./assets/logo icon/lotus.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./styles/flower.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
-    <!-- Nav -->
+    <canvas id="flowerCanvas"></canvas>
+
+    <!-- Navbar -->
     <div class="nav">
       <div class="logo">Project Vidhya</div>
       <div class="links">
         <ul>
-          <li>Home</li>
-          <li>Misson</li>
-          <li>About me</li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Mission</a></li>
+          <li><a href="#">About Me</a></li>
         </ul>
       </div>
     </div>
-    <!-- end Nav -->
 
-    <!-- hero -->
-    <div class="hero">
-      <img src="./assets/logo icon/lotus.png" />
-      <h1>There will be more things in this site,</h1>
-      <h1>for now enjoy notes and demos</h1>
-    </div>
-    <!-- <hr /> -->
-    <!-- hero -->
+    <!-- Downloads Section -->
     <div class="downloads">
-      <h1>notes and other stuff</h1>
+      <h1>Explore</h1>
+      <p>Notes and Projects</p>
       <ul>
-        <li>How to Study ?</li>
-        <li>Class 10 &#127802;</li>
-        <li>Class 11 &#127799;</li>
-        <li>Class 12&#127803;</li>
-        <li>more will come...</li>
+        <li><a href="./pages/main/Basics/HowToStudy.html">How to Study?</a></li>
+        <li><a href="#">Class 10 🌸</a></li>
+        <li><a href="#">Class 11 🌿</a></li>
+        <li><a href="#">Class 12 🌺</a></li>
+        <li><a href="#">More will come...</a></li>
       </ul>
     </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+      <img src="./assets/logo icon/lotus.png" alt="Lotus Logo" />
+      <h1>There will be more things in this site,</h1>
+      <h1>we will grow little-little a day</h1>
+    </div>
+
+    <!-- Message Section -->
     <div class="end">
       <h1>Message to all</h1>
       <p>
-        This is open source project, which aims to develop new methods of
+        This is an open-source project that aims to develop new methods of
         learning and teaching.
       </p>
       <br />
-      <p>I want you to collab by</p>
-      <ul>
-        <li>making suggestions</li>
-        <li>inventing new things or methods</li>
-        <li>creating art</li>
-        <li>craft projects</li>
-        <li>or simply by giving money &#128181; (donation).</li>
-        <li>at least kuch to karo!</li>
-      </ul>
+      <p>Help the misson by contributing</p>
     </div>
-    <marquee width="100%" direction="left" height="20px" scrollamount="50">
-      &#127802;itna tez hogo ki koi bhi read nahi kar payega, jaise sarre govt
-      sites pe iska use karte hai, glow text bhi add kar duga taki visibility
-      aur bhi kam ho jaye&#127802;
-    </marquee>
+    <!-- contribute -->
+    <div class="contri-cover">
+      <div class="contribute">
+        <h2>How to Contribute</h2>
+        <ul>
+          <li>make art and project (it can be small)</li>
+          <li>
+            give suggestions (like better notes or explaination or colors)
+          </li>
+          <li>even little little help from everyone can be a big thing</li>
+        </ul>
+      </div>
+    </div>
+    <!-- Scrolling Text -->
+    <!-- <div class="marquee-container">
+      <span class="marquee-text">
+        🌸 Itna tez hogo ki koi bhi read nahi kar payega, jaise saare govt sites
+        pe iska use karte hai, glow text bhi add kar dunga taki visibility aur
+        bhi kam ho jaye! 🌸
+      </span>
+    </div> -->
+    <script src="./scripts/flower.js"></script>
   </body>
 </html>

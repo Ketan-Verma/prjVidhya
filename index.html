@@ -17,6 +17,7 @@
     <link rel="icon" href="./assets/logo icon/lotus.png" type="image/x-icon" />
     <link rel="stylesheet" href="./styles/flower.css" />
     <link rel="stylesheet" href="./styles/style.css" />
+    <!-- <link rel="stylesheet" href="./styles/circles.css" /> -->
   </head>
   <body>
     <canvas id="flowerCanvas"></canvas>
@@ -28,34 +29,49 @@
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">Mission</a></li>
-          <li><a href="#">About Me</a></li>
+          <li>
+            <!-- rel="noopener noreferrer" -->
+            <a target="_blank" href="http://in.linkedin.com/in/ketanjverma"
+              >About Me</a
+            >
+          </li>
         </ul>
       </div>
     </div>
 
     <!-- Downloads Section -->
     <div class="downloads">
-      <h3>Namaste Baccho</h3>
-      <!-- <p></p> -->
-      <p>You will love these notes and projects 💕</p>
-      <ul>
-        <li><a href="./pages/main/Basics/HowToStudy.html">How to Study?</a></li>
-        <li><a href="#">Class 10 🪻</a></li>
-        <li><a href="#">Class 11 🌹</a></li>
-        <li><a href="#">Class 12 🌺</a></li>
-        <li><a href="#">More will come...</a></li>
-      </ul>
+      <div class="download-text">
+        <h3><span id="greet"></span></h3>
+        <!-- <p></p> -->
+        <p>You will love these notes and projects 💕</p>
+      </div>
+      <div class="download-link">
+        <ul>
+          <li>
+            <a href="./pages/main/Basics/HowToStudy.html">How to Study?</a>
+          </li>
+          <li><a href="#">Class 10 🪻</a></li>
+          <li><a href="#">Class 11 🌹</a></li>
+          <li><a href="#">Class 12 🌺</a></li>
+          <li><a href="#">More will come...</a></li>
+        </ul>
+      </div>
     </div>
 
     <!-- Hero Section -->
     <div class="hero">
-      <img src="./assets/logo icon/lotus.png" alt="Lotus Logo" />
+      <picture>
+        <img src="./assets/logo icon/lotus.png" alt="Lotus Logo" />
+      </picture>
       <h1>
         There will be more developments in this site,<br />
         we will grow little-little everyday
       </h1>
     </div>
-
+    <div class="circle-div">
+      <!-- <canvas id="heroCanvas"></canvas> -->
+    </div>
     <!-- Message Section -->
     <div class="end">
       <h1>Message to all</h1>
@@ -83,6 +99,10 @@
           <br />
           <li>even little little help from everyone can be a big thing</li>
         </ul>
+        <p>
+          Use <b> github, X (twitter), youtube, p5.js</b> and other such
+          platforms for submissions
+        </p>
       </div>
     </div>
     <!-- Scrolling Text -->
@@ -93,6 +113,19 @@
         bhi kam ho jaye! 🌸
       </span>
     </div> -->
+    <div class="footer">
+      <picture>
+        <img id="cherry" src="./assets/flowers/cherry2.png" alt="" />
+      </picture>
+      <!-- <picture>
+        <img id="cherrytree" src="./assets/flowers/cherrytree.png" alt="" />
+      </picture> -->
+      <picture>
+        <img id="morebush" src="./assets/flowers/cherry.png" alt="" />
+      </picture>
+    </div>
     <script src="./scripts/flower.js"></script>
+    <script src="./scripts/talk.js"></script>
+    <!-- <script src="./scripts/circles.js"></script> -->
   </body>
 </html>

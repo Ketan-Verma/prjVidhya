@@ -6,14 +6,14 @@
   width: 100vw;
   height: 100vh;
   pointer-events: none; /* Prevent interactions */
-  z-index: 0; /* Put behind other content (or change to higher value if needed) */
+  z-index: 1; /* Put behind other content (or change to higher value if needed) */
 }
 .downloads {
   /* background-image: url(); */
   background-image: url("../assets/flowers/blossembranch1.png");
   background-repeat: no-repeat;
   background-size: 200px;
-  min-height: 80vh;
+  min-height: 90vh;
 }
 .downloads p {
   font-weight: 500;
@@ -24,5 +24,43 @@
 @media only screen and (max-width: 600px) {
   .downloads {
     background-size: 120px;
+    min-height: 90vh;
   }
+  #morebush {
+    z-index: 100;
+    max-width: 100%;
+    /* max-height: 100%; */
+    bottom: 0;
+    right: 0;
+  }
+  #cherry {
+    max-width: 200px;
+    left: 10px;
+  }
+  #morebush {
+    max-width: 250px;
+    right: 0;
+  }
+}
+@media only screen and (min-width: 600px) {
+  #morebush {
+    /* display: none; */
+    width: 350px;
+    right: 25%;
+  }
+  #cherry {
+    width: 350px;
+    right: 40%;
+    left: 28%;
+    /* display: none; */
+  }
+}
+.footer {
+  /* min-height: max-content; */
+  position: relative;
+  height: 20vh;
+}
+.footer img {
+  position: absolute;
+  bottom: 0;
 }

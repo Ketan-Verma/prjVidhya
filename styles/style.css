@@ -1,12 +1,20 @@
+/* 
+long time no code 
+gate prep me busy
+don't jude my code 😅
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Pahawh+Hmong&family=Pacifico&display=swap");
 
 :root {
   --bg-main: #f2cfe0;
   --bg-sec: #edb4d0;
-  --mob-bg-sec: #f8e6ee;
-  --bg-3: #b20b5c;
+  --mob-bg-sec: #fbdeeb;
+  --bg-3: #ff007b;
   --text-sec: #9b3922;
   --text-main: #5c1756;
+  --mob-text-main: #310b2e;
   --text-normal: #e0e0e0;
 }
 
@@ -29,13 +37,19 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--bg-sec);
+  /* background-color: var(--text-main); */
+  background-color: var(--mob-text-main);
+  /* background-color: var(--bg-sec); */
   padding: 1em 2em;
+  /* border-bottom: 1px solid var(--text-main); */
+  margin-bottom: 10px;
+  color: var(--bg-main);
 }
 
 .nav .logo {
   font-weight: bold;
   font-size: 1.5em;
+  /* color: var(--bg-3); */
 }
 
 .nav ul {
@@ -46,7 +60,8 @@ body {
 .nav li a {
   font-size: 1.2em;
   font-weight: 500;
-  color: var(--text-main);
+  /* color: var(--text-main); */
+  color: var(--bg-main);
   padding: 0.5em 1em;
 }
 
@@ -57,9 +72,13 @@ body {
 
 /* Hero Section */
 .hero {
+  z-index: 10;
   text-align: center;
   background: var(--bg-main);
-  padding: 4em 2em;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hero img {
@@ -73,9 +92,16 @@ body {
 
 /* Downloads Section */
 .downloads {
-  padding: 3em 2em;
+  /* padding: 3em 2em; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+} /*
+.download-text {
 }
-
+.download-link {
+}*/
 .downloads h1,
 .downloads h2,
 .downloads h3,
@@ -95,6 +121,7 @@ body {
 }
 
 .downloads li {
+  font-weight: 500;
   font-size: 1.5em;
   background: var(--bg-main);
   padding: 15px;
@@ -186,25 +213,47 @@ body {
   .nav {
     flex-direction: column;
     text-align: center;
+    background-color: var(--mob-text-main);
+    font-size: 0.85em;
   }
-
   .nav ul {
     display: none;
   }
   .hero {
     background-color: var(--mob-bg-sec);
+    min-height: 50vh;
   }
   .hero h1 {
     font-size: 22px;
   }
+  .circle-div {
+    background-color: var(--mob-bg-sec);
+  }
+
   .downloads ul {
     flex-direction: column;
     align-items: center;
   }
   .downloads {
+    /* margin-top: 100px; */
     background-color: var(--bg-sec);
+  }
+  .download-text {
+    margin-top: 10px;
   }
   .contribute {
     background-color: var(--mob-bg-sec);
   }
+}
+
+/* animations */
+#greet {
+  font-family: "Pacifico";
+  display: inline-block;
+  font-size: 1.5rem;
+  /* font-weight: bold; */
+  white-space: nowrap;
+  /* border-right: 3px solid black; */
+  /* Cursor effect */
+  /* animation: blink 0.7s infinite; */
 }

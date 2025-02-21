@@ -10,13 +10,29 @@ window.addEventListener("resize", resizeCanvas);
 resizeCanvas();
 
 let flowers = [];
+/*
+//this part is for local host
+
+const flowerImages = [
+  "../assets/flowers/flower2.png",
+  "../assets/flowers/flower3.png",
+  "..//assets/flowers/flower4.png",
+  "../assets/flowers/flower5.png",
+  "../assets/flowers/flower6.png",
+]; // Array of flower image paths
+*/
+
+// this will work for githubpages
+
 const flowerImages = [
   "/prjVidhya/assets/flowers/flower2.png",
   "/prjVidhya/assets/flowers/flower3.png",
   "/prjVidhya/assets/flowers/flower4.png",
   "/prjVidhya/assets/flowers/flower5.png",
   "/prjVidhya/assets/flowers/flower6.png",
-]; // Array of flower image paths
+];
+/**/
+// Array of flower image paths
 
 // Linear interpolation function
 function lerp(start, end, t) {
@@ -115,7 +131,6 @@ function createFlowers() {
     flowers.push(new Flower());
   }
 }
-
 // Function to animate the flowers
 function animate() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
